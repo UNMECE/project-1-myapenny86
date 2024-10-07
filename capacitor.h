@@ -1,4 +1,4 @@
-stuct _capacitor
+struct _capacitor
 {
 	double *time;
 	double *voltage;
