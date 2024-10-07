@@ -11,7 +11,7 @@ struct _capacitor
 	double *current;
 	double C;
 };
-typdef struct _capacitor Capacitor;
+typedef struct _capacitor Capacitor;
 
 void allocate_capacitor_arrays(Capacitor &cap, int num_steps)
 {
@@ -41,7 +41,7 @@ void constant_current_supply(Capacitor &cap, double I, double dt, int num_steps)
 	}
 }
 
-void constant_voltage_supply(Capacitor &cap, double V0, double R, double dt, int num_steps
+void constant_voltage_supply(Capacitor &cap, double V0, double R, double dt, int num_steps)
 {
 	cap.current[0] = V0/R;
 	for(int t = 1; t < num_steps; ++t)
